@@ -28,7 +28,7 @@ choice_hunger = "How do you feel about Briar’s dream?" + '\n' + "Amused (1) | 
 
 #Dream coldness
 dream_coldness = "It’s been a long time since you’ve thought about Ino. Though, perhaps they’re always with you. How you hurt each other—or, rather, how you hurt them. The little cruelties, living hopes that withered." \
-                 "\nYou were in a building, amorpheous and unfamiliar. The hallways, with their narrow and dark-wooded halls, didn’t exist in real life, but you knew they were your childhood home. You turned over your shoulder. Ino stared at you. Wide-eyed, head angled, wearing an expression both accusing and vapid. You wake with the taste of metal in your mouth." \
+                 "\nYou were in a building, amorpheous and unfamiliar. The hallways, with their narrow and dark-wooded walls, didn’t exist in real life, but you knew they were your childhood home. You turned over your shoulder. Ino stared at you. Wide-eyed, head angled, wearing an expression both accusing and vapid. You wake with the taste of metal in your mouth." \
                  "\nSomething about the dream reminds you of another one—your body splayed on a bed with dark red sheets, neck snapped. It was a dream about death, crawling beneath your skin, but it had a dull, deep edge of resignation."
 
 choice_coldness = "Which dream feels more tangible?" + '\n' + "The dream of Ino (1) | The dream of yourself (2)"
@@ -36,21 +36,21 @@ choice_coldness = "Which dream feels more tangible?" + '\n' + "The dream of Ino 
 #Middle
 
 middle1 = "The sunlight in your dorm is cold, antiseptic. It filters over your bare walls and blue striped sheets, trickles down from the popcorn ceilings. Your desk is spacious and wide, save for  a lamp, a few sticky notes, and a printer. You keep the floors swept clean. In the center of the room is a large, empty space, right in front of the floor-to-ceiling windows." \
-          + '\n' + "The room is impersonal but comfortable. You haven’t sunk into it, built an identity to disturb it, to force it to adapt. Soon, you’ll hang up pictures, buy some rugs and charis, gather knicknacks on your desk. But not yet." \
+          + '\n' + "The room is impersonal but comfortable. You haven’t sunk into it, disturbed it, forced it to adapt. Soon, you’ll hang up pictures, buy some rugs and charis, gather knicknacks on your desk. But not yet." \
           + '\n' + "College has wrung your foundation out from under you. No one here knows your familier patterns of speech, the roles you fell into when in groups. You want to build yourself up. Differently, better. And then you’ll know how to fill this space." \
-          + '\n' + "But that person won’t come from nowhere. You still have some past experiences with rough edges, that you haven’t decided how to integrate."
+          + '\n' + "But that person won’t come from nowhere. Some of your experiences still have rough edges. They haven't yet become a part of you."
 middlechoicehunger = "What do you want to reflect on?" + '\n' + "Your parents (1) | Your childhood friend (2)"
 middlechoicecoldness = "What do you want to reflect on?" + '\n' + "Your parents (1) | Your best friend (2)"
 middlechoicewrath = "What do you want to reflect on?" + '\n' + "Your childhood friend (1) | Your best friend (2)"
 
-end1 = "You begin to feel restless, cooped inside your dorm room on this Saturday morning. Outside, the Fall air is fresh and bright, comfortably cool." + '\n' + "There are things waiting for you outside: friends to chat with, crushes to flirt with, new locations on campus to explore. But right now you can’t move. You can’t rest. You have one more recollection to attend to."
+end1 = "You begin to feel restless, cooped inside your dorm room on this Saturday morning. You tap your finger against your dull blue desk, and the sound echoes, dull and muffled." + '\n' + "Outside, the Fall air is fresh and bright, comfortably cool. There are things waiting for you there: friends to chat with, crushes to flirt with, new locations on campus to explore. But right now you can’t move. You can't collect yourself. You have one more recollection to attend to."
 endchoice1 = click
 
 ######################### COLDNESS TEXT #########################
 
-cquote = "“I crave separation, dissection: the small dense core of ‘me,’ existing separate from all else.” - August Nelson"
+cquote = "“I crave isolation, dissection: the small dense core of ‘me,’ existing separate from all else.” - August Nelson"
 
-ctext1 = "Beneath your skin, old memories hum and burn. Though you try not to, sometimes they become tainted, slip from your tongue and gather dirt from outside." + '\n' + "They don’t rest easily beneath your skin. When you place your hand over your cheek, you feel them pulse. As you get older, you see similarities between people that may or may not be there, pour their memories into each other until the colors muddy."
+ctext1 = "Beneath your skin, old memories hum and burn. Though you try not to, sometimes they become tainted, slip from your tongue and gather dirt from outside. As you get older, you see similarities between people that may or may not be there, pour their memories into each other until the colors muddy." + '\n' + "They don’t rest easily beneath your skin. When you place your hand over your cheek, you feel them pulse."
 cchoice1 = "What do you try to do?" + '\n' + "Internalize them (1) | Ignore them (2)"
 
 ctext2 = "Most of these memories you gained a while ago. You slipped into politeness with the beat and rhythm of your favorite song. Maybe it’s from your parents, their European roots: “American children are so rude, but we raised you better.” Another brick to your immature, crumbling sense of superiority."\
@@ -128,14 +128,14 @@ htext3 = "It feels like survival. Scurrying through narrow hallways with tepid f
          + '\n' + "Still, what a call to fame."
 hchoice3 = click
 
-htext4 = "The school feels torn in two directions" \
+htext4 = "The school felt torn in two directions" \
          + '\n' + "The first: People crying and hugging in hallways. Classrooms set aside for mass mourning. Petitions sent to the administration for their cold-heartedness." \
          + '\n' + "The second: Teachers giving homework as usual. Flourescent lights humming, deadlines looming. An announcement about the suicide during period three, lost in the shuffle of students in hallways." \
          + '\n' + "Beneath it all—a cloying, sickening concern. Hushed discussions on mental health, goody bags of cheerful paraphernelia. Censorship of student writing deemed too depressing. The school hired no new counselors or psychologists, made no structural changes." \
-         + '\n' + "When the suicides happened, you don’t feel much. You didn’t know them. The day after, you felt young and stupid, reminding yourself not to laugh too loud with your friend."
+         + '\n' + "When the suicides happened, you didn’t feel much. You didn’t know them. The day after, you felt young and stupid, reminding yourself not to laugh too loud with your friend."
 hchoice4 = "Should you have cared more?" + '\n' + "Yes (1) | No (2)"
 
-htext5 = "When you talk about your high school to other people, their eyes narrow, trying to envision it. Your school becomes scrubbed clean in bright, pure sunlight, melts like ice in warm candlelight. The whole town, in fact, rises from your lips in a mirage and then dissipates. On the phone with Briar, you discuss the inevitable question of nostalgia." \
+htext5 = "When you talk about your high school to other people, their eyes narrow, trying to envision it. Your school becomes scrubbed clean in bright, pure sunlight, melts like ice in warm candlelight. The whole town, in fact, rises from your lips in a mirage, and then dissipates. On the phone with Briar, you discuss the inevitable question of nostalgia." \
          + '\n' + "“I don’t miss the town,” you say. “I miss the people.”" \
          + '\n' + "As soon as you say it, you wonder if it’s true. You struggled against your town: you took the train to the City, wandered aimlessly through the woods, to avoid the suburban roads and strip malls."
 
@@ -149,7 +149,7 @@ htext7 = "In the first years of knowing each other, you read books about taut, u
            + '\n' + "You leaned heavily on each other, but with a sincere earnestness. There was no passive-aggressiveness, no undercutting comments."
 hchoice7 = "Still, did your closeness feel like a threat to your identity?" + '\n' + "Yes (1) | No (2)"
 
-htext8 = "In sophomore year, you both submitted to the same poetry competition. You loved the elegance of her words, their concrete and mechanical nature. She was chosen to read to the school auditorium. Everything about her was scultped stone, regal and immortal. She moved the way a soft, detailed marble statue looks like it could. Fitted red jacket, wide searching eyes, words heavy and emphatic. You were proud, honored to be her friend."
+htext8 = "In sophomore year, you both submitted to the same poetry competition. You loved the elegance of her words, their concrete and mechanical nature. She was chosen to read to the school auditorium. Everything about her was scultped stone, regal and immortal. Fitted red jacket, wide searching eyes, words heavy and emphatic. You were proud, honored to be her friend.She moved the way a soft, detailed marble statue looks like it could."
 hchoice8 = "But maybe, just maybe, you felt a little jealousy too." + '\n' + "You did (1) | You didn't (2)"
 
 htext9 = "Even while you and Briar orbited around each other, your paths began to widen. Your clubs list becames differentiated; you joined other circles of friends. Still, the time you spent together was just as significant as it used to be, if not more so. The town was dull and small, smothering, but together, you breathed new life into it."
@@ -168,7 +168,7 @@ htext13 = ""
 hchoice13 = ""
 
 htext14 = ""
-hchoice14 = "Which place call to you most?" + '\n' + "The Coffee Shop (1) | The Arboretum (2) | The Field (3)"
+hchoice14 = "Which place calls to you most?" + '\n' + "The Coffee Shop (1) | The Arboretum (2) | The Field (3)"
 
 hcoffeetext = "It was common for you and Briar to run into other people at the coffee shop—teachers, mutual friends. But the world you and Briar created was captivating, entrenched. You would fall back into the pattern of your conversations, tuning out whoever else was there, intentionally or not."
 hcoffeechoice = "Do you wish you had focused more on other people?" + '\n' + "Yes (1) | No (2)"
@@ -179,7 +179,8 @@ harbtext = "The arboretum was where you and Briar had one of your talks. You had
            + '\n' + "But it was. Your friendship was one of the best things—if not the best thing—to happen in  your life."
 harbchoice = "Do you doubt it at all?" + '\n' + "Yes (1) | No (2)"
 
-hstarstext = "Your friendship with Briar was drenched in certain aesthetics; the yellowed, crinkling pages of old books, the purple-black velvet of the night sky, tailored blazers and boots clicking on marble floors, dried flowers. “What’s the point of living life if it isn’t in an aesthetic way?” Briar once said." \
+hstarstext = "That night in the field has a certain sense of adventure, of intensity. When you close your eyes, it only takes a moment for you to slip back there, into the biting wind and cold dewdrops, the stars piercing and clear overhead.," \
+             + '\n' + "Your friendship with Briar was drenched in certain aesthetics; the yellowed, crinkling pages of old books, the purple-black velvet of the night sky, tailored blazers and boots clicking on marble floors, dried flowers. “What’s the point of living life if it isn’t in an aesthetic way?” Briar once said." \
          + '\n' + "You agreed with her, to some extent. You love the earnestness, the intensity, of living your life to the fullest, of finding the most vivid way to experience it." \
          + '\n' + "But you think over-aestheticizing can sometimes diminish real moments, make them caricatures. And you like to evaluate your sight, your touch, your sound, without falling too deep into your senses, in case how you experience one moment bleeds into the next one."
 hstarschoice = "Did you lean towards or away from aestheticizing?" + '\n' + "Towards (1) | Away (2)"
@@ -218,7 +219,7 @@ wchoice2 = "You wished she would:" + '\n' + "Hold you close (1) | Let you go (2)
 
 wtext3 = "Your mother’s thoughts on queer people have always been conflicting. She changed the channel when there were two boys kissing. Once, she said it was healthy for little girls and boys to idolize each other as princes and princesses in love." \
          + '\n' + "But once she recommended a television episode about two lesbian moms. When you told her you might be queer for the first time, she nodded, thanked you, and had forgotten about it a few months later." \
-         + '\n' + "When your mother cried because you wanted to go to Boston Pride, she said it was because of your safety."
+         + '\n' + "So. When your mother cried because you wanted to go to Boston Pride, she said it was because of your safety."
 wchoice3 = "Did you believe her?" + '\n' + "Yes (1) | No (2)"
 
 wtext4 = ""
@@ -280,7 +281,7 @@ wtext16 = "There are other memories you could dwell on. Summer camp, when your m
           + "\n" + "Perhaps you have become being dragon-like, headstrong, hoarding rationalizations and pettiness to justify your cruelty. Perhaps you haven’t told enough of your parents’ side of the story."
 wchoice16 = "Do you trust your recollections?" + '\n' + "Yes (1) | No (2)"
 
-wtext17 = "There’s another story you haven’t told. The scar on your face—its piercing clarity, its central narrative. Born through negligence rather than intentionality, not that that made it cut any less deep." \
+wtext17 = "There’s another story you haven’t told. The scar on your face—its piercing clarity, its central narrative. Born through negligence rather than intentionality, even if that didn't make it cut any less deep." \
             + '\n' + "But already, these reflections have gone on too long. No matter how many times your glances pass over it in the mirror, the skin will never smooth, the scar will never fade away." \
             + '\n' + "A friend of yours once said: “As soon as you understand the ways your parents fucked you up, it becomes your responsibility to fix them.”"
 wchoice17 = "Will you take responsibility?" + '\n' + "Yes (1) | No (2)"
@@ -290,7 +291,7 @@ wchoice18 = "Your parents will never know you as a good person." + '\n' + "But w
             + '\n' + "Yes (1) | No (2)"
 
 wendingquote = "You leave your childhood home desecrated. Blood on the floor, fingernails in hallways, versions of yourself buried in the walls. They shudder when the wind blows through open windows." + \
-               '\n' + "If you call ‘nostalgia’ their hand gripped over yours—then what do you call the healed scars, the parts of yourself that no longer feel pain?"
+               '\n' + "If you call ‘nostalgia’ their hand gripped over yours, their thoughts seeping through your own—then what do you call the healed scars, the parts of yourself that no longer feel pain?"
 
 
 

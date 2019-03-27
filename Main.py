@@ -8,6 +8,7 @@ y_axis = []
 played_hunger = False
 played_coldness = False
 played_wrath = False
+played_middle = False
 
 #Setups for all the reflections
 
@@ -63,7 +64,6 @@ def play_wrath(played_wrath = played_wrath):
     f.display_quote("Reflection: Wrath", "Start", t.wbeginningquote, italic = True)
     wrath()
     f.display_quote("Reflection: Wrath", "End", t.wendingquote)
-    f.button_hover = f.blue_button_hover
 
 #Play Reflection: Coldness
 def coldness(x_axis = x_axis, y_axis = y_axis):
@@ -286,7 +286,7 @@ def wrath (x_axis = x_axis, y_axis = y_axis):
         x_axis.append(-1)
 
     w3 =f.turn(t.wtext3, t.wchoice3)
-    if w2 == 1:
+    if w3== 1:
         x_axis.append(1)
         y_axis.append(1)
     else:
@@ -414,6 +414,7 @@ if intro_2 == 1:
 
     play_wrath()
     played_wrath = True
+    setup_modern()
 
 elif intro_2 == 2:
     coldness_intro = f.turn(t.dream_coldness, t.choice_coldness)
@@ -424,6 +425,7 @@ elif intro_2 == 2:
 
     play_coldness()
     played_coldness = True
+    setup_modern()
 
 elif intro_2 == 3:
     hunger_intro = f.turn(t.dream_hunger, t.choice_hunger)
@@ -434,36 +436,40 @@ elif intro_2 == 3:
 
     play_hunger()
     played_hunger = True
+    setup_modern()
 
 #Play middle
 setup_modern()
 
-if played_hunger == True:
+if (played_hunger == True) and (played_middle == False):
     middle = f.turn(t.middle1, t.middlechoicehunger)
     if middle == 1:
         play_wrath()
         played_wrath = True
-    else:
+    elif middle == 2:
         play_coldness()
         played_coldness = True
+    played_middle = True
 
-if played_coldness == True:
+if (played_coldness == True) and (played_middle == False):
     middle = f.turn(t.middle1, t.middlechoicecoldness)
     if middle == 1:
         play_wrath()
         played_wrath = True
-    else:
+    elif middle == 2:
         play_hunger()
         played_wrath = True
+    played_middle = True
 
-if played_wrath == True:
+if (played_wrath == True) and (played_middle == False):
     middle = f.turn(t.middle1, t.middlechoicewrath)
     if middle == 1:
         play_coldness()
         played_coldness = True
-    else:
+    elif middle == 2:
         play_hunger()
         played_hunger = True
+    played_middle = True
 
 #Play end
 setup_modern()

@@ -37,4 +37,9 @@ while not game_quit:
             pygame.mixer.music.stop()
         elif menu_choice == 'Load Game':
             pygame.mixer.music.stop()
-            import playGameSaved
+            try:
+                fh = open('C:/Users/megha/Desktop/PythonGames/Monstrous/Save file', 'r')
+                import playGameSaved
+            except FileNotFoundError:
+                f.display_quote_start_game("Save file not found. New game will be started.", italic=False, modern=True)
+                import playGame

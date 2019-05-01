@@ -89,7 +89,7 @@ def display_choice(message, color = text_color, bg_color = background_color, tex
         pos_y += 20
         pygame.display.update()
 
-def get_bg_color(modern, x, y):
+def get_bg_color(x, y, modern=False):
     if (modern == True):
         text_color = black
         button_color = yellow_ochre_dark
@@ -101,12 +101,20 @@ def get_bg_color(modern, x, y):
 
         if x < 0:
             blue_val = min(45 + 4 * x, 255)
+            if (blue_val < 0):
+                blue_val = 0
             red_val = min(39 + -4 * x + 4 * y, 255)
+            if (red_val < 0):
+                red_val = 0
             background_color = (red_val, 0, blue_val)
 
         else:
             red_val = min(45 + 4 * x + 4 * y, 255)
+            if (red_val < 0):
+                rede_val = 0
             blue_val = min(39 + 4 * x, 255)
+            if (blue_val < 0):
+                blue_val = 0
             background_color = (red_val, 0, blue_val)
 
     return background_color
@@ -117,7 +125,9 @@ def turn(text_to_display, choice_to_display, x, y, font = game_font, num_choices
     it determines if the user clicked on button 1 or button 2. It returns clicking on button 1 or clicking on button 2
     as user choice."""
 
-    bg_color = get_bg_color(modern, x, y)
+    print("X axis: " + str(x) + " Y axis: " + str(y))
+
+    bg_color = get_bg_color(x, y, modern)
 
     screen.fill(bg_color)
 
@@ -136,7 +146,7 @@ def turn(text_to_display, choice_to_display, x, y, font = game_font, num_choices
     else:
         display_choice(choice_to_display, short_message = False)
 
-    pygame.display.update()
+    #pygame.display.update()
 
     if num_choices == 0:
 
@@ -151,6 +161,7 @@ def turn(text_to_display, choice_to_display, x, y, font = game_font, num_choices
 
                 if event.type == pygame.MOUSEBUTTONDOWN:
                     turn_over = True
+                pygame.display.update()
 
     if num_choices == 2:
 
@@ -304,6 +315,7 @@ def turn(text_to_display, choice_to_display, x, y, font = game_font, num_choices
                 pygame.display.update()
 
     screen.fill(background_color)
+
     return choice
 
 
@@ -330,13 +342,14 @@ def display_image(name):
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 turn_over = True
 
-def display_quote(reflection_name, start_or_end, quote, italic = False):
+def display_quote(reflection_name, start_or_end, quote, x, y, italic = False):
 
-    screen.fill(background_color)
+    bg = get_bg_color(x, y)
+    screen.fill(bg)
 
-    rendered_intro = game_font.render(reflection_name, True, text_color)
+    rendered_intro = game_font.render(reflection_name, True, white)
     screen.blit(rendered_intro, (20, 20))
-    rendered_start = game_font.render(start_or_end, True, text_color)
+    rendered_start = game_font.render(start_or_end, True, white)
     screen.blit(rendered_start, (20, 40))
 
     pos_y = 100
@@ -353,12 +366,12 @@ def display_quote(reflection_name, start_or_end, quote, italic = False):
         split_wrapped_token = wrapped_token.split('\n')
         #pos_y += 20
         for token in split_wrapped_token:
-            rendered_text = quote_font.render(token, True, text_color)
+            rendered_text = quote_font.render(token, True, white)
             screen.blit(rendered_text, (20, pos_y))
             pos_y += 20
             pygame.display.update()
 
-    rendered_click = game_font.render("(Click anywhere to continue)", True, text_color)
+    rendered_click = game_font.render("(Click anywhere to continue)", True, white)
     screen.blit(rendered_click, (20, 560))
     pygame.display.update()
 
@@ -376,10 +389,14 @@ def display_quote(reflection_name, start_or_end, quote, italic = False):
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 turn_over = True
 
-def display_quote_start_game(quote, italic = True):
+def display_quote_start_game(quote, italic = True, modern = False):
 
-    temp_background = black
-    temp_text_color = white
+    if modern:
+        temp_background = yellow_ochre
+        temp_text_color = black
+    else:
+        temp_background = black
+        temp_text_color = white
 
     screen.fill(temp_background)
 
@@ -419,8 +436,8 @@ def display_quote_start_game(quote, italic = True):
 
 def display_save():
 
-    temp_background = black
-    temp_text_color = white
+    temp_background = yellow_ochre
+    temp_text_color = black
 
     screen.fill(temp_background)
 
@@ -431,7 +448,7 @@ def display_save():
     rendered_game_saved = game_font.render("Game saved", True, temp_text_color)
     rendered_click = game_font.render("(Click anywhere to continue)", True, temp_text_color)
 
-    screen.blit(rendered_game_saved, (20, 520))
+    screen.blit(rendered_game_saved, (20, 40))
     screen.blit(rendered_click, (20, 560))
     pygame.display.update()
 
@@ -450,7 +467,9 @@ def display_save():
                 turn_over = True
 
 def display_monster_screen(monster, monster_desc):
-    quote_font_large = pygame.font.SysFont('couriernew', 17)
+    screen.fill(black)
+
+    quote_font_large = pygame.font.SysFont('couriernew', 17, italic=True)
     quote_font = pygame.font.SysFont('couriernew', 15)
 
     monster_is = "Your monster is: " + monster
@@ -468,10 +487,25 @@ def display_monster_screen(monster, monster_desc):
         pos_y += 30
         pygame.display.update()
 
-    rendered_monster = quote_font.render(monster_is, True, white)
-    screen.blit(rendered_monster, (20, 20))
+    rendered_click = game_font.render("(Click to return to menu)", True, white)
+    screen.blit(rendered_click, (20, 560))
 
-    display_quote_start_game(monster_desc)
+    turn_over = False
+
+    while not turn_over:
+
+        for event in pygame.event.get():
+
+            if event.type == pygame.QUIT:
+                pygame.quit()
+                exit()
+                turn_over = True
+
+            elif event.type == pygame.MOUSEBUTTONDOWN:
+                turn_over = True
+
+    #rendered_monster = quote_font.render(monster_is, True, white)
+    #screen.blit(rendered_monster, (20, 20))
 
 def start_menu():
     "Displays the menu; returns what button in the menu the user clicks on"
@@ -493,33 +527,21 @@ def start_menu():
 
     button_font = pygame.font.SysFont('couriernew', 16)
 
-    button_1 = pygame.draw.rect(screen, yellow_ochre_dark, (250, 40, 95, 40))
-    button_1_text = button_font.render('New Game', True, white)
-    screen.blit(button_1_text, (255, 45))
-
-    button_2 = pygame.draw.rect(screen, yellow_ochre_dark, (460, 270, 95, 40))
-    button_2_text = button_font.render('Load Game', True, white)
-    screen.blit(button_2_text, (465, 275))
-
-    button_3 = pygame.draw.rect(screen, yellow_ochre_dark, (250, 530, 95, 40))
-    button_3_text = button_font.render('Credits', True, white)
-    screen.blit(button_3_text, (255, 535))
-
-    button_4 = pygame.draw.rect(screen, yellow_ochre_dark, (40, 275, 95, 40))
-    button_4_text = button_font.render('About', True, white)
-    screen.blit(button_4_text, (45, 280))
-
-    """
-    for item in button_text:
-        button_text = button_font.render(item, True, black)
-        screen.blit(button_text, (x_text, y_text))
-        y_text += 80
-    """
     pygame.display.update()
 
     while display_menu:
 
         for event in pygame.event.get():
+
+            button_1 = pygame.draw.rect(screen, yellow_ochre_hover, (245, 40, 100, 40))
+
+            button_2 = pygame.draw.rect(screen, yellow_ochre_hover, (460, 270, 100, 40))
+
+            button_3 = pygame.draw.rect(screen, yellow_ochre_hover, (245, 530, 100, 40))
+
+            button_4 = pygame.draw.rect(screen, yellow_ochre_hover, (40, 275, 100, 40))
+
+            mouse = pygame.mouse.get_pos()
 
             if event.type == pygame.QUIT:
                 pygame.quit()
@@ -531,24 +553,51 @@ def start_menu():
             #If mousebuttondown then return menu_choice
             #Reference Turn
 
-            elif event.type == pygame.MOUSEBUTTONDOWN:
-                mouse = pygame.mouse.get_pos()
-
-                if button_1.collidepoint(mouse):
+            elif button_1.collidepoint(mouse):
+                if event.type == pygame.MOUSEBUTTONDOWN:
                     menu_choice = 'New Game'
-                   # print("button 1")
-                elif button_2.collidepoint(mouse):
-                    menu_choice = 'Load Game'
-                    #print("button 2")
-                elif button_3.collidepoint(mouse):
-                    menu_choice = 'Credits'
-                   # print("button 3")
-                elif button_4.collidepoint(mouse):
-                    menu_choice = 'About'
-                   # print("button 4")
+                    display_menu = False
                 else:
-                    menu_choice = 'none'
-            display_menu = False
+                    button_1 = pygame.draw.rect(screen, white, (245, 40, 100, 40))
+
+            elif button_2.collidepoint(mouse):
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    menu_choice = 'Load Game'
+                    display_menu = False
+                else:
+                    button_2 = pygame.draw.rect(screen, white, (460, 270, 100, 40))
+
+            elif button_3.collidepoint(mouse):
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    menu_choice = 'Load Game'
+                    display_menu = False
+                else:
+                    button_3 = pygame.draw.rect(screen, white, (245, 530, 100, 40))
+
+            elif button_4.collidepoint(mouse):
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    menu_choice = 'About'
+                    display_menu = False
+                else:
+                    button_4 = pygame.draw.rect(screen, white, (40, 275, 100, 40))
+
+            else:
+                menu_choice = 'none'
+
+            button_1_text = button_font.render('New Game', True, black)
+            screen.blit(button_1_text, (255, 45))
+
+            button_2_text = button_font.render('Load Game', True, black)
+            screen.blit(button_2_text, (465, 275))
+
+            button_3_text = button_font.render('Credits', True, black)
+            screen.blit(button_3_text, (260, 535))
+
+            button_4_text = button_font.render('About', True, black)
+            screen.blit(button_4_text, (55, 280))
+
+        pygame.display.update()
+           # display_menu = False
 
     return menu_choice
 

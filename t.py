@@ -1,8 +1,10 @@
+#Text displayed in the game
+
 click = "Click anywhere to continue"
 
 ######################### MODERN TEXT #########################
 
-dedication = "This game is dedicated to Mira and Sonia, my real family."
+dedication = "This game is dedicated to Mira and Sonia. Thank you for being the best family I could hope for."
 
 quote = "The purpose of memory, whether real or fake, is an important one. Memories model the past so that you make the best decisions in the future. In other words, memory is not supposed to be accurate; it helps you survive going forward. - Natalia Jagtar"
 
@@ -85,6 +87,9 @@ cchoice7 = "Did you think they were self-inflicted?" + '\n' + "Yes (1) | No (2)"
 ctext8 = "The closeness between you and Ino was breathing, vibrant, if unhealthy—but it wasn’t your entire world." \
          + '\n' + "At recess, they told the teacher that you were wearing the wrong kind of shoes, so you would have to stay inside with them. When you began to befriend a new girl, Briar, in your eight-grade English class, Ino disagreed with everything you and Briar said. They were snippy and haughty enough that you and Briar remember the strangeness of that situation years later, even if you don’t remember what was said." \
          + '\n' + "Maybe Ino had begun to sense how tenuous your friendship was, how quickly you would leave it for something better."
+ctext8_briar = "The closeness between you and Ino was breathing, vibrant, if unhealthy—but it wasn’t your entire world." \
+         + '\n' + "At recess, they told the teacher that you were wearing the wrong kind of shoes, so you would have to stay inside with them. When you began to befriend Briar in your eight-grade English class, Ino disagreed with everything you and Briar said. They were snippy and haughty enough that you and Briar remember the strangeness of that situation years later, even if you don’t remember what was said." \
+         + '\n' + "Maybe Ino had begun to sense how tenuous your friendship was, how quickly you would leave it for something better."
 cchoice8 = "Did you feel guilty for growing apart from them?" + '\n' + "Yes (1) | No (2)"
 
 ctext9 = "There were other reasons you began to feel suffocated. They would insult you with undercutting jokes, no matter how often you asked them not to. They would talk at you even though your expression had long since glazed over. Most likely, you had done things against them, too—but this you remember even less." \
@@ -112,6 +117,7 @@ cchoice13 = click
 cendingquote = "I need to remember how to write stories for myself. Lose the performative, the fog, bury the face in the glass. Even mirrors, with their living and breathing images, stare back with wide-eyed innocence. Too many times have I thought of myself rising like smoke. To see if my body is really my own, if a hint of truth glimmers through, or if I’m nothing more than artificial."
 
 ######################### HUNGER TEXT #########################
+
 hbeginningquote = "I laugh at people who say vulnerability is strength. Vulnerabilities exist, must be acknowledged, like cats yowling for food, but God: I rue the day all I’m known for is being hungry." \
                   + '\n' + "Medals in fake gold. Peeling stickers on certificates. Fraying lace and chunky heels. Lopsided knots on wrinkled silk ties. Ivy browning on brimstone buildings." \
                   + '\n' + "Hungry hungry hungry." + '\n' + "Don't let it devour any more."
@@ -141,7 +147,7 @@ htext5 = "When you talk about your high school to other people, their eyes narro
 
 hchoice5 = "Maybe it has a tighter hold on you than you’d like to think." + '\n' + "It does (1) | It doesn't (2)"
 
-htext6 = "You and Briar have other friends, of course: but “people” mostly refers to each other. You were close enough that most of the school thought you were a couple. When you mentioned your boyfriend to your lab partner, her mouth opened in surprise." \
+htext6 = "You and Briar have other friends, of course: but “people” mostly refers to each other. You were close enough that most of the school thought you were a couple. When you mentioned your boyfriend to one of your classmates, her mouth opened in surprise." \
          + '\n' + "“Oh, no!” she said. “Did you and Briar break up?”"
 hchoice6 = "Did you care that people misunderstood your relationship?" + '\n' + "Yes (1) | No (2)"
 
@@ -149,7 +155,7 @@ htext7 = "In the first years of knowing each other, you read books about taut, u
            + '\n' + "You leaned heavily on each other, but with a sincere earnestness. There was no passive-aggressiveness, no undercutting comments."
 hchoice7 = "Still, did your closeness feel like a threat to your identity?" + '\n' + "Yes (1) | No (2)"
 
-htext8 = "In sophomore year, you both submitted to the same poetry competition. You loved the elegance of her words, their concrete and mechanical nature. She was chosen to read to the school auditorium. Everything about her was scultped stone, regal and immortal. Fitted red jacket, wide searching eyes, words heavy and emphatic. You were proud, honored to be her friend.She moved the way a soft, detailed marble statue looks like it could."
+htext8 = "In sophomore year, you both submitted to the same poetry competition. You loved the elegance of her words, their concrete and mechanical nature. She was chosen to read to the school auditorium. Everything about her was scultped stone, regal and immortal. Fitted red jacket, wide searching eyes, words heavy and emphatic. She moved the way a soft, detailed marble statue looks like it could. You were proud, honored to be her friend."
 hchoice8 = "But maybe, just maybe, you felt a little jealousy too." + '\n' + "You did (1) | You didn't (2)"
 
 htext9 = "Even while you and Briar orbited around each other, your paths began to widen. Your clubs list becames differentiated; you joined other circles of friends. Still, the time you spent together was just as significant as it used to be, if not more so. The town was dull and small, smothering, but together, you breathed new life into it."
@@ -180,9 +186,7 @@ harbtext = "The arboretum was where you and Briar had one of your talks. You had
 harbchoice = "Do you doubt it at all?" + '\n' + "Yes (1) | No (2)"
 
 hstarstext = "That night in the field has a certain sense of adventure, of intensity. When you close your eyes, it only takes a moment for you to slip back there, into the biting wind and cold dewdrops, the stars piercing and clear overhead.," \
-             + '\n' + "Your friendship with Briar was drenched in certain aesthetics; the yellowed, crinkling pages of old books, the purple-black velvet of the night sky, tailored blazers and boots clicking on marble floors, dried flowers. “What’s the point of living life if it isn’t in an aesthetic way?” Briar once said." \
-         + '\n' + "You agreed with her, to some extent. You love the earnestness, the intensity, of living your life to the fullest, of finding the most vivid way to experience it." \
-         + '\n' + "But you think over-aestheticizing can sometimes diminish real moments, make them caricatures. And you like to evaluate your sight, your touch, your sound, without falling too deep into your senses, in case how you experience one moment bleeds into the next one."
+             + '\n' + "Your friendship with Briar was drenched in certain aesthetics; the yellowed, crinkling pages of old books, the purple-black velvet of the night sky, tailored blazers and boots clicking on marble floors, dried flowers. “What’s the point of living life if it isn’t in an aesthetic way?” Briar once said."
 hstarschoice = "Did you lean towards or away from aestheticizing?" + '\n' + "Towards (1) | Away (2)"
 
 hplacetext = ""
@@ -195,11 +199,11 @@ htext15 = "There isn’t much more to say about your recollections, except that 
 hchoice15 = click
 
 hendingquote = "The city had teeth in asphalt, in jagged edges, in brutal decadence that sinks earth:" \
-               + '\n' + "And we walked cold, hungry, sprinted to trains that took us to new streets of stone, where we bruised our mouths on building-sides, searched for a force to" \
+               + '\n' + '\n' + "And we walked cold, hungry, sprinted to trains that took us to new streets of stone, where we bruised our mouths on building-sides, searched for a force to" \
                + '\n' + "break us" + '\n' + "crush us" + '\n' + "meld us." \
-               + '\n' + "We buried in sidewalk cracks bones of birds we’ve killed—" \
+               + '\n' + '\n' + "We buried in sidewalk cracks bones of birds we’ve killed—" \
                + '\n' + "giving us rotting earth to grow from." \
-               + '\n' + "What sweet self-sacrifice!" \
+               + '\n' + '\n' + "What sweet self-sacrifice!" \
                + '\n' + "What rich exploitation."
 
 ######################### WRATH TEXT #########################
@@ -210,9 +214,12 @@ wtext1 = "You are not your mother’s child. She doesn’t know this yet. You wo
          + '\n' + "You have her nose, her earlobes, but this body is not your own. Your features slide away in the mirror when you look at your face; your clothes drape on your frame as they would on a hanger." \
          + '\n' + "In middle school, you spent hours carefully selecting mismatched outfits, dabbing toothpaste over your skin to dry out the pimples. Your hair hung around your face in a disorganized cloud."
 
-wchoice1 = "How do you feel about your middle-school self?" + '\n' + "Disgut (1) | Fondness (2) | Pride (3)"
+wchoice1 = "How do you feel about your middle-school self?" + '\n' + "Disgust (1) | Fondness (2) | Pride (3)"
 
 wtext2 = "You met your friend Briar when she was also in middle school. Unlike you, she had an alluring confidence, complete with colored hair and unconventional fashion. You joined the Queer club with her when you both started high school. Even when you thought you were straight, it offered a sense of community and acceptance you’ll always be grateful for." \
+         + '\n' +  "You wanted to go to Boston pride Freshman year, but your mother cried. “Something might happen,” she said. “What if you get attacked?”" \
+         + '\n' + "Your mother was never one to hold your hand tightly when you crossed the street, but she fought to keep you close to home."
+wtext2_briar = "You met Briar when she was also in middle school. Unlike you, she had an alluring confidence, complete with colored hair and unconventional fashion. You joined the Queer club with her when you both started high school. Even when you thought you were straight, it offered a sense of community and acceptance you’ll always be grateful for." \
          + '\n' +  "You wanted to go to Boston pride Freshman year, but your mother cried. “Something might happen,” she said. “What if you get attacked?”" \
          + '\n' + "Your mother was never one to hold your hand tightly when you crossed the street, but she fought to keep you close to home."
 wchoice2 = "You wished she would:" + '\n' + "Hold you close (1) | Let you go (2)"
@@ -293,7 +300,32 @@ wchoice18 = "Your parents will never know you as a good person." + '\n' + "But w
 wendingquote = "You leave your childhood home desecrated. Blood on the floor, fingernails in hallways, versions of yourself buried in the walls. They shudder when the wind blows through open windows." + \
                '\n' + "If you call ‘nostalgia’ their hand gripped over yours, their thoughts seeping through your own—then what do you call the healed scars, the parts of yourself that no longer feel pain?"
 
+######################### MONSTER DESCRIPTIONS #########################
 
+hand_desc = "You consider yourself more important than your relationships. You take full responsibility for your negative traits. Additionally, you value ambition and self-actualization. Your monstrous side is a source of strength and empowerment. Your downfall rests in your sense of self-importance and insular perspective, which can isolate you from the emotions and viewpoints of others. Additionally, by accepting yourself completely, you risk being more cruel than you need to be."
+teeth_desc = "You linger on your trauma, and it remains steeped in regret. You believe yourself responsible for your own monstrosity, and have no control over it. Intentionally or not, you limit your closeness to other people as you believe you will hurt them. Your strength resides in honest, careful self-reflection. You embrace most crushing responsibility possible. If you grow past it, or accept it as empowerment, nothing will be able to break you."
+eye_desc = "You’re human: or at least, you think you are. You value relationships deeply and focus on others more than yourself. This can lead to a lack of honesty and self-reflection, as you blame others for your flaws. However, you generally believe in people’s good intentions. Even if they cause you pain, you see it accidental and shrug it off. You could keep living happily like this. Though, if you want to strengthen the relationships you value so deeply, you may need to turn your focus inwards and let yourself experience negativity."
+throat_desc = "Your trauma has made you defensive. Your throat is bared to the outside world, but you do everything you can to harden it and protect yourself. You desire validation from others, but rarely find it. Often, they hurt you, or you’re too closed-off to form a genuine connection. You think others are the cause of your monstrous traits, but you direct your frustrations at yourself. Your strength comes from recognizing that things may not be your fault, but they are your responsibility. No matter what happens in your life, you will be able to examine and integrate it. The challenge lies in doing this productively, without limiting yourself."
+
+######################### ABOUT AND CREDITS #########################
+
+about_header = "About the Game"
+about_text = "You can’t choose your past, but you can choose how to remember it. In \"Monstrous,\" you face memories of your worst traits. How you reflect on them will determine who you become in the next chapter of your life. Your past has made you into a monster—but what kind of monster will it be?"
+
+about_creator_header = "About the Game Developer"
+about_creator = "Daniel enjoys creating in different ways, whether that means writing or computer science. His Monstrous form doesn\'t have a face.  " + "To keep up with Daniel's current projects, visit danadykiel.wordpress.com"
+about_return = "Return to the \"About\" page after finishing the game for information on how your monster gets chosen"
+about_playthroughs = "To read through past playthroughts of the game, open \"Past playthroughs.txt\" in the \"Monstrous\" folder."
+
+about_monsters_header = "About the Monsters"
+about_monsters_1 = "The monsters personify the user's negative traits. The user can get one of four monsters (Hands, Teeth, Eyes, Throat) based on how they choose to remember their memories." + '\n'
+about_monsters_2 = "Throughout the game, the user is plotted on a graph. Each choice slightly changes the value of one or both axes. The background color also changes based on these values." + '\n'
+about_monsters_3 = "The axes are determined as follows: Focus on self (negative x, redder background), focus on others (positive x, bluer background), acceptance (positive y, lighter background), angst (negative y, darker background)" + '\n'
+about_monsters_4 = "Each monster corresponds with a different quadrant: Hands (negative x, positive y), Teeth (negative x, negative y), Eyes (positive x, positive y), Throat (positive x, negative y)" + '\n'
+
+about_monsters = about_monsters_1 + about_monsters_2 + about_monsters_3 + about_monsters_4
+
+credits = "Game written, developed, and created by Daniel Dykiel" + '\n' + "Music by Kevin MacLeod" + '\n' + "For full credits (including a list of songs), open \"Credits.txt\" in the \"Monstrous\" folder"
 
 
 

@@ -1,7 +1,9 @@
+#Setup script to turn Monstrous into a .exe file
+
 import sys
 from cx_Freeze import setup, Executable
 
-includefiles = ['icon.png', 'Anamalie.mp3', 'Lone Harvest.mp3', 'Morgana Rides.mp3', 'Sovereign Quarter.mp3']
+includefiles = ['Art/icon.png', 'Music/Anamalie.mp3', 'Music/Lone Harvest.mp3', 'Music/Morgana Rides.mp3', 'Music/Sovereign Quarter.mp3', 'Music/Evening of Chaos.mp3', "Art/MonstrousTitleScreen.png", "Credits.txt"]
 includes = []
 packages = ['pygame']
 
@@ -9,5 +11,5 @@ setup(
     name = 'Monstrous',
     version = '1.0',
     options = {'build_exe': {'includes':includes,'packages':packages,'include_files':includefiles}},
-    executables = [Executable(script = 'Monstrous DEMO.py', icon = 'icon.ico')]
+    executables = [Executable(script = 'Monstrous.py', icon = 'Art/icon.ico')]
 )

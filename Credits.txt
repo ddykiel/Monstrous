@@ -1,0 +1,38 @@
+### Game
+
+Game developed, written, and created by Daniel Dykiel
+danadykiel.wordpress.com
+
+Game created using the PyGame library (pygame.org)
+To view the code, visit github.com/ddykiel/Monstrous
+
+### Art
+
+### Music
+
+Music by Kevin MacLeod
+
+Main theme: Evening of Chaos
+Evening of Chaos Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+Modern-day theme: Sovereign Quarter
+Sovereign Quarter Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+Wrath: Lone Harvest
+Lone Harvest Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+Coldness: Anamalie
+Anamalie Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+Hunger: Morgana Rides
+Morgana Rides Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/

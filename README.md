@@ -15,5 +15,26 @@ The game will have three main branches, or reflections. The user will play all o
 
 ## Credits:
 
-Game written and developed by Daniel Dykiel
-Score by Kevin MacLeod
+### Game
+
+Game developed, written, and created by Daniel Dykiel
+danadykiel.wordpress.com
+
+Game created using the PyGame library (pygame.org)
+To view the code, visit github.com/ddykiel/Monstrous
+
+### Art
+
+Hand Monster and Throat Monster design/drawing by Freddie O'Brion
+freddieillustration.tumblr.com
+
+Teeth Monster design/drawing by Owen Blaufuss
+bluef00t.neocities.org
+bluef00t.tumblr.com
+
+Eye Monster design/drawing by Daniel Dykiel
+
+### Music
+
+Music by Kevin MacLeod
+incompetech.com

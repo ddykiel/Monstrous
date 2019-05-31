@@ -21,10 +21,10 @@ monster_desc = game_list[9]
 
 #Setups for all the reflections: they make the background color, button color, captions, etc correct for that reflection
 def setup_modern():
-    pygame.display.set_caption("Monstrous")
     pygame.mixer.music.stop()
     pygame.mixer.music.load('Music/Sovereign Quarter.mp3')
     pygame.mixer.music.play(-1)
+    pygame.display.set_caption("Monstrous")
     f.text_color = f.black
     f.button_color = f.yellow_ochre_dark
     f.button_text_color = f.yellow_ochre_button_text
@@ -476,7 +476,6 @@ if (played_intro == False):
         x_axis, y_axis = wrath(x_axis, y_axis)
         f.display_quote("Reflection: Wrath", "End", t.wendingquote, x_axis, y_axis, para_breaks=True)
         played_wrath = True
-        setup_modern()
 
     elif intro_2 == 2:
         coldness_intro = f.turn(t.dream_coldness, t.choice_coldness, x_axis, y_axis, modern = True)
@@ -490,7 +489,6 @@ if (played_intro == False):
         x_axis, y_axis = coldness(x_axis, y_axis)
         f.display_quote("Reflection: Coldness", "End", t.cendingquote, x_axis, y_axis)
         played_coldness = True
-        setup_modern()
 
     elif intro_2 == 3:
         hunger_intro = f.turn(t.dream_hunger, t.choice_hunger, x_axis, y_axis, modern = True)
@@ -504,14 +502,13 @@ if (played_intro == False):
         x_axis, y_axis = hunger(x_axis, y_axis)
         f.display_quote("Reflection: Hunger", "End", t.hendingquote, x_axis, y_axis)
         played_hunger = True
-        setup_modern()
 
     played_intro = True
     f.save(x_axis, y_axis, played_hunger, played_coldness, played_wrath, played_intro, played_middle, played_end)
+    setup_modern()
 
 #Play middle (modern-day) and a reflection
 if played_middle == False:
-    #setup_modern()
 
     if (played_hunger == True) and (played_middle == False):
         middle = f.turn(t.middle1, t.middlechoicehunger, x_axis, y_axis, modern = True)
@@ -521,7 +518,6 @@ if played_middle == False:
             x_axis, y_axis = wrath(x_axis, y_axis)
             f.display_quote("Reflection: Wrath", "End", t.wendingquote, x_axis, y_axis, para_breaks=True)
             played_wrath = True
-            setup_modern()
             played_middle = True
         elif middle == 2:
             play_coldness()
@@ -529,9 +525,7 @@ if played_middle == False:
             x_axis, y_axis = coldness(x_axis, y_axis)
             f.display_quote("Reflection: Coldness", "End", t.cendingquote, x_axis, y_axis)
             played_coldness = True
-            setup_modern()
             played_middle = True
-
 
     if (played_coldness == True) and (played_middle == False):
         middle = f.turn(t.middle1, t.middlechoicecoldness, x_axis, y_axis, modern = True)
@@ -541,7 +535,6 @@ if played_middle == False:
             x_axis, y_axis = wrath(x_axis, y_axis)
             f.display_quote("Reflection: Wrath", "End", t.wendingquote, x_axis, y_axis, para_breaks=True)
             played_wrath = True
-            setup_modern()
             played_middle = True
         elif middle == 2:
             play_hunger()
@@ -549,9 +542,7 @@ if played_middle == False:
             x_axis, y_axis = hunger(x_axis, y_axis)
             f.display_quote("Reflection: Hunger", "End", t.hendingquote, x_axis, y_axis)
             played_hunger = True
-            setup_modern()
             played_middle = True
-
 
     if (played_wrath == True) and (played_middle == False):
         middle = f.turn(t.middle1, t.middlechoicewrath, x_axis, y_axis, modern = True)
@@ -561,7 +552,6 @@ if played_middle == False:
             x_axis, y_axis = coldness(x_axis, y_axis)
             f.display_quote("Reflection: Coldness", "End", t.cendingquote, x_axis, y_axis,)
             played_coldness = True
-            setup_modern()
             played_middle = True
         elif middle == 2:
             play_hunger()
@@ -569,14 +559,13 @@ if played_middle == False:
             x_axis, y_axis = hunger(x_axis, y_axis)
             f.display_quote("Reflection: Hunger", "End", t.hendingquote, x_axis, y_axis)
             played_hunger = True
-            setup_modern()
             played_middle = True
     f.save(x_axis, y_axis, played_hunger, played_coldness, played_wrath, played_intro, played_middle, played_end)
+    setup_modern()
     played_middle = True
 
 #Play end (modern-day) and a reflection
 if played_end == False:
-    #setup_modern()
     end = f.turn(t.end1, t.endchoice1, x_axis, y_axis, num_choices = 0, modern = True)
     if played_hunger and played_coldness and not played_wrath:
         play_wrath()
@@ -584,7 +573,6 @@ if played_end == False:
         x_axis, y_axis = wrath(x_axis, y_axis)
         f.display_quote("Reflection: Wrath", "End", t.wendingquote, x_axis, y_axis, para_breaks=True)
         played_wrath = True
-        setup_modern()
         played_end = True
     if played_coldness and played_wrath and not played_hunger:
         play_hunger()
@@ -592,7 +580,6 @@ if played_end == False:
         x_axis, y_axis = hunger(x_axis, y_axis)
         f.display_quote("Reflection: Hunger", "End", t.hendingquote, x_axis, y_axis)
         played_hunger = True
-        setup_modern()
         played_end = True
     if played_hunger and played_wrath and not played_coldness:
         play_coldness()
@@ -600,10 +587,10 @@ if played_end == False:
         x_axis, y_axis = coldness(x_axis, y_axis)
         f.display_quote("Reflection: Coldness", "End", t.cendingquote, x_axis, y_axis)
         played_coldness = True
-        setup_modern()
         played_end = True
 
     f.save(x_axis, y_axis, played_hunger, played_coldness, played_wrath, played_intro, played_middle, played_end)
+    setup_modern()
     played_end = True
 
     monster = ""
@@ -623,10 +610,12 @@ if played_end == False:
         monster = "Throat Monster"
         monster_desc = t.throat_desc
 
+    f.append_monster_choice(monster, monster_desc)
     f.save(x_axis, y_axis, played_hunger, played_coldness, played_wrath, played_intro, played_middle, played_end, monster, monster_desc, display=False)
+    played_end = True
 
 #Display the user's monster and description, playing the Main Theme music
-#This code is in an "if" statement so it will run from here if the player selects "Load"
+#This code is in an "if" statement so it will run from here if the player selects "Load," and they've already gotten their monster
 if played_end == True:
     pygame.mixer.music.stop()
     pygame.mixer.music.load('Music/Evening of Chaos.mp3')

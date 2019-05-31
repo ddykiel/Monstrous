@@ -11,6 +11,7 @@ display_height = 600
 white = (255, 255, 255)
 black = (0, 0, 0)
 gray = (105, 105, 105)
+light_gray = (200, 200, 200)
 
 yellow_ochre = (255, 239, 188)
 yellow_ochre_dark = (96, 90, 71)
@@ -45,6 +46,8 @@ game_font = pygame.font.SysFont('couriernew',14)
 
 def save(x_axis, y_axis, played_hunger, played_coldness, played_wrath, played_intro, played_middle, played_end, monster = '', monster_desc = '', display=True):
     """Stores a list of important objects in a save file on the user's computer so that they can later load the game"""
+
+    pygame.mixer.music.stop()
 
     if display:
         display_save()
@@ -372,6 +375,12 @@ def start_menu():
 
     return menu_choice
 
+def append_monster_choice(monster, monster_desc):
+    file = open(file_name, 'a')
+    to_write = "Monster: " + monster + '\n' + monster_desc + '\n' + '\n'
+    file.write(to_write)
+    file.close()
+
 def display(message, color = text_color, text = game_font):
     """Display text in the game for the reflections and modern-day scenes"""
 
@@ -564,43 +573,111 @@ def display_save():
 
 
 def display_monster_screen(monster, monster_desc):
-    """Displays the monster title and description at the end of the game"""
+    """Displays the monster title/description and image at the end of the game"""
+
     screen.fill(black)
 
     quote_font_large = pygame.font.SysFont('couriernew', 17, italic=True)
     quote_font = pygame.font.SysFont('couriernew', 15)
 
     monster_is = "Your monster is: " + monster
-
     rendered_text_monster_is = quote_font_large.render(monster_is, True, white)
-    screen.blit(rendered_text_monster_is, (20, 50))
 
-    pos_y = 80
-    wrapped_quote = textwrap.fill(monster_desc, 60)
-    split_wrapped_quote = wrapped_quote.split('\n')
-    pos_y += 20
-    for token in split_wrapped_quote:
-        rendered_text = quote_font.render(token, True, white)
-        screen.blit(rendered_text, (20, pos_y))
-        pos_y += 30
-        pygame.display.update()
+    monster_file_name = 'Art/' + monster + '.png'
 
-    rendered_click = game_font.render("(Click to return to menu)", True, white)
-    screen.blit(rendered_click, (20, 560))
-
+    display_screen = True
     turn_over = False
+    already_displayed = False
 
+    button_1_rect = pygame.draw.rect(screen, white, (235, 570, 60, 20))
+    button_2_rect = pygame.draw.rect(screen, white, (325, 570, 60, 20))
+
+    #Different monsters have different dimensions, so they have different display positions
+    if monster == 'Hand Monster' or monster == 'Throat Monster':
+        blit_pos = (0, 0)
+
+    elif monster == 'Teeth Monster':
+        blit_pos = (110, 10)
+
+    else: # monster == 'Throat Monster'
+        blit_pos = (5, -20)
+
+    #When the user presses button 1, they switch between the monster description and image.
+    #If they press button 2, the function exits, and the user returns to the menu
     while not turn_over:
 
+        #Displays monster description
+        if display_screen:
+
+            #Ensures PyGame only displays the screen once. Otherwise, the text looks strange.
+            if not already_displayed:
+                screen.blit(rendered_text_monster_is, (20, 50))
+
+                pos_y = 80
+                wrapped_quote = textwrap.fill(monster_desc, 60)
+                split_wrapped_quote = wrapped_quote.split('\n')
+                pos_y += 20
+                for token in split_wrapped_quote:
+                    rendered_text = quote_font.render(token, True, white)
+                    screen.blit(rendered_text, (20, pos_y))
+                    pos_y += 30
+
+                rendered_choice = game_font.render("View monster image (1) | Return to menu (2)", True, white)
+                screen.blit(rendered_choice, (115, 540))
+                pygame.display.update()
+                already_displayed = True
+
+        #Displays monster image
+        if not display_screen:
+
+            #Ensures PyGame only displays the screen once. Otherwise, the text looks strange.
+            if not already_displayed:
+                monster_image = pygame.image.load(monster_file_name)
+                monster_image = monster_image.convert_alpha()
+                screen.blit(monster_image, blit_pos)
+
+                rendered_choice = game_font.render("View monster description (1) | Return to menu (2)", True, white)
+                screen.blit(rendered_choice, (100, 540))
+                pygame.display.update()
+                already_displayed = True
+
         for event in pygame.event.get():
+
+            button_1_rect = pygame.draw.rect(screen, white, (235, 565, 60, 25))
+            button_2_rect = pygame.draw.rect(screen, white, (325, 565, 60, 25))
+
+            num_1 = game_font.render("1", True, black)
+            screen.blit(num_1, (259, 568))
+            num_2 = game_font.render("2", True, black)
+            screen.blit(num_2, (350, 568))
+
+
+            mouse = pygame.mouse.get_pos()
 
             if event.type == pygame.QUIT:
                 pygame.quit()
                 exit()
                 turn_over = True
 
-            elif event.type == pygame.MOUSEBUTTONDOWN:
-                turn_over = True
+            elif button_1_rect.collidepoint(mouse):
+
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    display_screen = not display_screen
+                    already_displayed = False
+                    screen.fill(black)
+                else:
+                    button_1_rect = pygame.draw.rect(screen, light_gray, (235, 565, 60, 25))
+                    num_1 = game_font.render("1", True, black)
+                    screen.blit(num_1, (259, 568))
+
+            elif button_2_rect.collidepoint(mouse):
+                if event.type == pygame.MOUSEBUTTONDOWN:
+                    turn_over = True
+                else:
+                    button_2_rect = pygame.draw.rect(screen, light_gray, (325, 565, 60, 25))
+                    num_2 = game_font.render("2", True, black)
+                    screen.blit(num_2, (350, 568))
+            pygame.display.update()
 
 def display_header_text(header, text, color = text_color, font = game_font, y_initial = 10):
     "Displays a header and text for the About and Credits section"
@@ -686,25 +763,3 @@ def display_credits():
             elif event.type == pygame.MOUSEBUTTONDOWN:
                 turn_over = True
 
-def display_image(name):
-    """Displays the appropriate image at the end of the chapter; returns to menu when user clicks"""
-
-    screen.fill(background_color)
-
-    image = pygame.image.load(name)
-    screen.blit(image, (0,100))
-    pygame.display.update()
-
-    turn_over = False
-
-    while not turn_over:
-
-        for event in pygame.event.get():
-
-            if event.type == pygame.QUIT:
-                pygame.quit()
-                exit()
-                turn_over = True
-
-            elif event.type == pygame.MOUSEBUTTONDOWN:
-                turn_over = True

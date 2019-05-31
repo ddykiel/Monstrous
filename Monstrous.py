@@ -44,6 +44,7 @@ while not game_quit:
 
             if menu_choice == 'NEW':
                 pygame.mixer.music.stop()
+                #runpy.run_module(mod_name='pythonmod1')
                 runpy.run_module(mod_name='playGame')
                 pygame.mixer.music.stop()
                 new_menu = True

@@ -38,7 +38,7 @@ choice_coldness = "Which dream feels more tangible?" + '\n' + "The dream of Ino 
 #Middle
 
 middle1 = "The sunlight in your dorm is cold, antiseptic. It filters over your bare walls and blue striped sheets, trickles down from the popcorn ceilings. Your desk is spacious and wide, save for  a lamp, a few sticky notes, and a printer. You keep the floors swept clean. In the center of the room is a large, empty space, right in front of the floor-to-ceiling windows." \
-          + '\n' + "The room is impersonal but comfortable. You haven’t sunk into it, disturbed it, forced it to adapt. Soon, you’ll hang up pictures, buy some rugs and charis, gather knicknacks on your desk. But not yet." \
+          + '\n' + "The room is impersonal but comfortable. You haven’t sunk into it, disturbed it, forced it to adapt. Soon, you’ll hang up pictures, buy some rugs and chairs, gather knicknacks on your desk. But not yet." \
           + '\n' + "College has wrung your foundation out from under you. No one here knows your familier patterns of speech, the roles you fell into when in groups. You want to build yourself up. Differently, better. And then you’ll know how to fill this space." \
           + '\n' + "But that person won’t come from nowhere. Some of your experiences still have rough edges. They haven't yet become a part of you."
 middlechoicehunger = "What do you want to reflect on?" + '\n' + "Your parents (1) | Your childhood friend (2)"
@@ -185,7 +185,7 @@ harbtext = "The arboretum was where you and Briar had one of your talks. You had
            + '\n' + "But it was. Your friendship was one of the best things—if not the best thing—to happen in  your life."
 harbchoice = "Do you doubt it at all?" + '\n' + "Yes (1) | No (2)"
 
-hstarstext = "That night in the field has a certain sense of adventure, of intensity. When you close your eyes, it only takes a moment for you to slip back there, into the biting wind and cold dewdrops, the stars piercing and clear overhead.," \
+hstarstext = "That night in the field has a certain sense of adventure, of intensity. When you close your eyes, it only takes a moment for you to slip back there, into the biting wind and cold dewdrops, the stars piercing and clear overhead." \
              + '\n' + "Your friendship with Briar was drenched in certain aesthetics; the yellowed, crinkling pages of old books, the purple-black velvet of the night sky, tailored blazers and boots clicking on marble floors, dried flowers. “What’s the point of living life if it isn’t in an aesthetic way?” Briar once said."
 hstarschoice = "Did you lean towards or away from aestheticizing?" + '\n' + "Towards (1) | Away (2)"
 
@@ -302,7 +302,7 @@ wendingquote = "You leave your childhood home desecrated. Blood on the floor, fi
 
 ######################### MONSTER DESCRIPTIONS #########################
 
-hand_desc = "You consider yourself more important than your relationships. You take full responsibility for your negative traits. Additionally, you value ambition and self-actualization. Your monstrous side is a source of strength and empowerment. Your downfall rests in your sense of self-importance and insular perspective, which can isolate you from the emotions and viewpoints of others. Additionally, by accepting yourself completely, you risk being more cruel than you need to be."
+hand_desc = "You consider yourself more important than your relationships. You take full responsibility for your negative traits. Additionally, you value ambition and self-actualization. Your monstrous side is a source of strength and empowerment. Your downfall rests in your sense of self-importance and insular perspective, which can isolate you from the emotions and viewpoints of others. By accepting yourself completely, you risk being more cruel than you need to be."
 teeth_desc = "You linger on your trauma, and it remains steeped in regret. You believe yourself responsible for your own monstrosity, and have no control over it. Intentionally or not, you limit your closeness to other people as you believe you will hurt them. Your strength resides in honest, careful self-reflection. You embrace most crushing responsibility possible. If you grow past it, or accept it as empowerment, nothing will be able to break you."
 eye_desc = "You’re human: or at least, you think you are. You value relationships deeply and focus on others more than yourself. This can lead to a lack of honesty and self-reflection, as you blame others for your flaws. However, you generally believe in people’s good intentions. Even if they cause you pain, you see it accidental and shrug it off. You could keep living happily like this. Though, if you want to strengthen the relationships you value so deeply, you may need to turn your focus inwards and let yourself experience negativity."
 throat_desc = "Your trauma has made you defensive. Your throat is bared to the outside world, but you do everything you can to harden it and protect yourself. You desire validation from others, but rarely find it. Often, they hurt you, or you’re too closed-off to form a genuine connection. You think others are the cause of your monstrous traits, but you direct your frustrations at yourself. Your strength comes from recognizing that things may not be your fault, but they are your responsibility. No matter what happens in your life, you will be able to examine and integrate it. The challenge lies in doing this productively, without limiting yourself."
@@ -325,7 +325,8 @@ about_monsters_4 = "Each monster corresponds with a different quadrant: Hands (n
 
 about_monsters = about_monsters_1 + about_monsters_2 + about_monsters_3 + about_monsters_4
 
-credits = "Game written, developed, and created by Daniel Dykiel" + '\n' + "Music by Kevin MacLeod" + '\n' + "For full credits (including a list of songs), open \"Credits.txt\" in the \"Monstrous\" folder"
+#Weird spacing here because adding a '\n' creates too much of a space
+credits = "Game written, developed, and created by Daniel Dykiel                " + "Game created using PyGame" '\n' + "Hand Monster and Throat Monster design/drawing by Freddie O'Brion" + "                                                         freddieillustration.tumblr.com" + '\n' + "Teeth Monster design/drawing by Owen Blaufuss                         " + "bluef00t.neocities.org                                  " + "bluef00t.tumblr.com" + '\n' + "Eye Monster design/drawing by Daniel Dykiel          " + "danadykiel.wordpress.org" + '\n' "Music by Kevin MacLeod                                  " + "incompetech.com" + '\n' + "Thanks to Mira Joseph and Sonia Joseph for their quotes/inspiration" + '\n' + "For full credits (including a list of songs), open \"Credits.txt\" in the \"Monstrous\" folder"
 
 
 
